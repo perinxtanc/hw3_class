@@ -64,7 +64,7 @@ while True:
     if shop_name == 'exit':
         break
     vendor_name = input("Enter vendor name: ")
-    vendor_kind = input("Enter vendor kind (tv, computer, white_goods, other): ")
+    vendor_kind = input("Enter vendor kind (electronics, white_goods, other): ")
     sales_amount = float(input("Enter sales amount: "))
 
     if shop_name in stores_dict:

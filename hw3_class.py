@@ -47,7 +47,10 @@ class Store:
             self.__vendor_sales_dict[vendor_name] = amount
 
     def __str__(self):
-        output = f"Total sales for {self.get_shop_name()}: {self.store_sales_amount()}\n"
+        output = f"Total sales for {self.get_shop_name()}:\n"
+        for vendor_name, vendor_kind in self.__sales_dict.keys():
+            output += f"{vendor_name} ({vendor_kind}) - {self.__sales_dict[(vendor_name, vendor_kind)]}\n"
+        output += f"Total sales for the store: {self.store_sales_amount()}\n"
         output += "Sales by vendor:\n"
         for vendor_name, amount in self.__vendor_sales_dict.items():
             output += f"{vendor_name} - {amount}\n"
@@ -73,3 +76,4 @@ while True:
 
 for store in stores_dict.values():
     print(store)
+

@@ -57,9 +57,8 @@ class Store:
 stores_dict = {}
 
 while True:
-    print("Welcome!")
     shop_name = input("Enter store name (or type 'exit' to quit): ")
-    if shop_name == 'exit':
+    if shop_name.lower() == 'exit':
         break
     vendor_name = input("Enter vendor name: ")
     vendor_kind = input("Enter vendor kind (tv, computer, white_goods, other): ")
@@ -74,4 +73,3 @@ while True:
 
 for store in stores_dict.values():
     print(store)
-
